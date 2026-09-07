@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<meta charset="utf-8">
+<title>오류를 찾으세요</title>
+<style>
+    h3 { text-align: center color: darkred; }
+    span { color: blue; font-size: 20px; }
+</style>
+</head>
+<body>
+<h3>Elvis Presley</h>
+He was an American singer and actor. In November 1956,
+he is often referred to as "<span>the King of Rock and Roll</span>".
+</body>
+</html>
+
+수정한 오류 (문제에서 요구한 3개)
+#	구분	오류 코드	수정 코드	설명
+1	HTML	<html> 바로 뒤에 <body>	| 해당 <body> 삭제	 | <head>보다 앞에 <body>가 열려 구조가 깨짐
+2	HTML	<h3>Elvis Presley</h> |	</h3>	| 닫는 태그 이름 불일치
+3	CSS	text-align: center color: darkred; | center; 뒤에 ; 추가	| 속성 구분 세미콜론 누락
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>오류를 찾으세요</title>
+<style>
+    h3 { text-align: center; color: darkred; }
+    span { color: blue; font-size: 20px; }
+</style>
+</head>
+<body>
+<h3>Elvis Presley</h3>
+He was an American singer and actor. In November 1956,
+he is often referred to as "<span>the King of Rock and Roll</span>".
+</body>
+</html>
